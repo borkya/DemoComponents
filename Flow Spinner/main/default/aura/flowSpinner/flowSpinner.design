@@ -1,0 +1,7 @@
+<design:component>
+    
+    <design:attribute name="wdRequestId" label="Variable for WD Request created " />
+    <design:attribute name="screenMessage" label="Message after spinner is done" />
+    <design:attribute name="timeout" label="Timeout for Spinner in miliseconds" />
+	
+</design:component>

@@ -1,0 +1,23 @@
+<aura:component implements="lightning:availableForFlowScreens,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="IsSpinner" type="Boolean"/>
+    <lightning:empApi aura:id="empApi"/>   
+    <aura:attribute name="channel" type="String" default="/event/DocuSign_Notification__e"/>
+	<aura:attribute name="subscription" type="Map"/>
+    <aura:attribute name="notifications" type="List"/>
+    <aura:attribute name="wdRequestId" type="String" />
+    <aura:attribute name="screenMessage" type="String" />
+ 	<aura:attribute name="timeout" type="Integer" />
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    
+   <aura:if isTrue="{!v.IsSpinner}">
+ 	   <lightning:spinner alternativeText="Loading" size="large" />
+       <aura:set attribute="else">
+        
+           <h2>{!v.screenMessage}</h2>
+           
+	    </aura:set>
+	 </aura:if>
+ 	       
+</aura:component>
